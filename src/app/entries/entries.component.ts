@@ -23,9 +23,14 @@ export class EntriesComponent implements OnInit {
   }
 ];
 
+  selectedEntry: Entry;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelectEntry(entry: Entry): void {
+    this.selectedEntry = entry;
+  }
 }
