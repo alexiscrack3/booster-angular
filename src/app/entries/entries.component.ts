@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Entry } from '../models/entry';
+import { EntryService } from '../services/entry.service';
 
 @Component({
   selector: 'app-entries',
@@ -7,30 +8,17 @@ import { Entry } from '../models/entry';
   styleUrls: ['./entries.component.scss']
 })
 export class EntriesComponent implements OnInit {
-  entries: Entry[] = [
-    {
-      id: '1',
-      class: 'noun',
-      headword: 'soccer'
-  }, {
-    id: '2',
-    class: 'verb',
-    headword: 'run'
-  }, {
-    id: '3',
-    class: 'noun',
-    headword: 'climbing'
-  }
-];
+  entries: Entry[] = [];
 
-  selectedEntry: Entry;
-
-  constructor() { }
+  constructor(private entryService: EntryService) { }
 
   ngOnInit() {
+    this.getEntries();
   }
 
-  onSelectEntry(entry: Entry): void {
-    this.selectedEntry = entry;
+  getEntries(): void {
+    this.entryService.getEntries().subscribe(entries => {
+      this.entries = entries;
+    });
   }
 }
