@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Entry } from '../models/entry';
-import { EntryService } from '../services/entry.service';
+import { EntriesService } from '../services/entries.service';
 
 @Component({
   selector: 'app-entries',
@@ -10,14 +10,14 @@ import { EntryService } from '../services/entry.service';
 export class EntriesComponent implements OnInit {
   entries: Entry[] = [];
 
-  constructor(private entryService: EntryService) { }
+  constructor(private entriesService: EntriesService) { }
 
   ngOnInit() {
     this.getEntries();
   }
 
   getEntries(): void {
-    this.entryService.getEntries().subscribe(entries => {
+    this.entriesService.getEntries().subscribe(entries => {
       this.entries = entries;
     });
   }

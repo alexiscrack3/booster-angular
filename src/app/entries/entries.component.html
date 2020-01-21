@@ -1,9 +1,18 @@
-<div *ngFor="let entry of entries" (click)="onSelectEntry(entry)">
-    {{entry.id}}
-    {{entry.headword}}
-    {{entry.class}}
-</div>
-
-<div *ngIf="selectedEntry">
-    <h2>{{selectedEntry.headword | uppercase}} Details</h2>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">headword</th>
+        <th scope="col">class</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of entries" (click)="onSelectEntry(entry)">
+        <th scope="row">{{entry.id}}</th>
+        <td>{{entry.headword}}</td>
+        <td>{{entry.class}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
