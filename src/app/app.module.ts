@@ -9,12 +9,15 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EntriesComponent } from './entries/entries.component';
+import { MaterialModule  } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntriesComponent
+    EntriesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    MaterialModule,
     BrowserAnimationsModule
   ],
   providers: [],
