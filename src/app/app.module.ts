@@ -14,13 +14,15 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { MaterialModule  } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
+import { CategoryPipe } from './pipes/category.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntriesComponent,
     SignUpComponent,
-    HomeComponent
+    HomeComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

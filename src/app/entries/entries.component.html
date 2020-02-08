@@ -1,18 +1,24 @@
-<div class="container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">id</th>
-        <th scope="col">headword</th>
-        <th scope="col">class</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let entry of entries" (click)="onSelectEntry(entry)">
-        <th scope="row">{{entry.id}}</th>
-        <td>{{entry.headword}}</td>
-        <td>{{entry.class}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table mat-table [dataSource]="entries" class="mat-elevation-z8 entry-list">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let entry"> {{entry.id}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="headword">
+    <th mat-header-cell *matHeaderCellDef> Headword </th>
+    <td mat-cell *matCellDef="let entry"> {{entry.headword}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Category </th>
+    <td mat-cell *matCellDef="let entry"> {{entry.category | category | titlecase }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let entry"> {{entry.id}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

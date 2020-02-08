@@ -9,8 +9,11 @@ import { EntriesService } from '../services/entries.service';
 })
 export class EntriesComponent implements OnInit {
   entries: Entry[] = [];
+  displayedColumns = ['id', 'headword', 'category', 'actions'];
 
-  constructor(private entriesService: EntriesService) { }
+  constructor(
+    private entriesService: EntriesService
+    ) { }
 
   ngOnInit() {
     this.getEntries();
