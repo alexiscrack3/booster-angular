@@ -1,0 +1,10 @@
+<h1>
+  <span>{{entry.headword}}</span>
+</h1>
+<span>{{entry.category | category | titlecase}}</span>
+<div *ngFor="let sense of entry.senses; index as i">
+  <span>{{i + 1}}</span><span>{{sense.definition}}</span>
+  <div *ngFor="let example of sense.examples">
+    <p>{{example}}</p>
+  </div>
+</div>

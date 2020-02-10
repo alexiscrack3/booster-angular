@@ -15,6 +15,7 @@ import { MaterialModule  } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { CategoryPipe } from './pipes/category.pipe';
+import { EntryDetailsComponent } from './entry-details/entry-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CategoryPipe } from './pipes/category.pipe';
     EntriesComponent,
     SignUpComponent,
     HomeComponent,
-    CategoryPipe
+    CategoryPipe,
+    EntryDetailsComponent
   ],
   imports: [
     BrowserModule,

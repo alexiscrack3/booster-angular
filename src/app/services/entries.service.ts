@@ -82,6 +82,11 @@ export class EntriesService {
     return of(this.entries);
   }
 
+  getEntry(id: String): Observable<Entry> {
+    const entry = this.entries.find(entry => entry.id === id);
+    return of(entry);
+  }
+
   // getEntries(): Observable<Entry[]> {
   //   return this.entries;
   // }
