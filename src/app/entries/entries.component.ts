@@ -24,8 +24,4 @@ export class EntriesComponent implements OnInit {
       this.entries = entries;
     });
   }
-
-  viewEntry(id: string) {
-    
-  }
 }
