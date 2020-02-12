@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { CategoryPipe } from './pipes/category.pipe';
 import { EntryDetailsComponent } from './entry-details/entry-details.component';
+import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     CategoryPipe,
     EntryDetailsComponent,
+    HeaderComponent,
     PageNotFoundComponent
   ],
   imports: [
