@@ -4,6 +4,7 @@ import { HomeComponent  } from './home/home.component';
 import { SignUpComponent  } from './auth/sign-up/sign-up.component';
 import { EntriesComponent } from './entries/entries.component';
 import { EntryDetailsComponent } from './entry-details/entry-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,11 @@ const routes: Routes = [
   {
     path: 'entries/:id',
     component: EntryDetailsComponent
-  }
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  },
 ];
 
 @NgModule({

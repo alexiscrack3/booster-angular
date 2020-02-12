@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { CategoryPipe } from './pipes/category.pipe';
 import { EntryDetailsComponent } from './entry-details/entry-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EntryDetailsComponent } from './entry-details/entry-details.component';
     SignUpComponent,
     HomeComponent,
     CategoryPipe,
-    EntryDetailsComponent
+    EntryDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
