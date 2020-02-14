@@ -1,0 +1,12 @@
+<form class="form-signin">
+  <h3>Please sign in</h3>
+  <div class="form-group">
+    <label for="inputEmail">Email</label>
+    <input type="email" id="inputEmail" class="form-control" [formControl]="emailFormControl" required autofocus>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword">Password</label>
+    <input type="password" id="inputPassword" class="form-control" [formControl]="passwordFormControl">
+  </div>
+  <button type="submit" class="btn btn-lg btn-primary btn-block">Sign In</button>
+</form>
